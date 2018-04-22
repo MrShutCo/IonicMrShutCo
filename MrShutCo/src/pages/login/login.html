@@ -1,0 +1,31 @@
+<ion-content class="login-content" padding>
+  <div class="login-box">
+    <ion-grid>
+        <ion-row>
+            <ion-col col-4></ion-col>
+            <ion-col col-4>
+                <h1>MrShutCo</h1>
+                <img src='../../assets/imgs/login.jpg'>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-4></ion-col>
+            <ion-col col-4>
+                <form (ngSubmit)="login()" #registerForm="ngForm">
+                    <ion-list>
+                        <ion-item>
+                            <ion-label color="primary">Email</ion-label>
+                            <ion-input name="email" [(ngModel)]="r.email"  placeholder="Please enter here"></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label color="primary">Password</ion-label>
+                            <ion-input name="password" type="password" [(ngModel)]="r.password" placeholder="Please enter here"></ion-input>
+                        </ion-item>
+                    </ion-list>
+                     <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+                    </form>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
